@@ -3,6 +3,10 @@ R="\e[31m"
 N="\e[0m"
 Y="\e[33m"
 G="\e[32m"
-echo -e "$R clour $N test"
-echo -e "$Y clour $N test"
-echo -e "$G clour $N test"
+id=$id -u
+if [ $id eq 0 ]
+then
+    yum install ngnix
+else
+    echo "Run with root a/c or get root access"
+fi
