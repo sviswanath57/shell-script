@@ -6,7 +6,9 @@ G="\e[32m"
 id=$(id -u)
 if [ $id -ne 0 ]
 then
-    echo "Run with root a/c or get root access"
+    echo -e "$R Error $N Run with root a/c or get root access"
+    exit 1
 else
-        yum install ngnix -y
+    echo -e  "$Y You are root user"
 fi
+yum install ngnix -y
