@@ -11,4 +11,4 @@ then
 else
     echo -e  "$Y You are root user"
 fi
-yum install ngnix -y
+yum install nginx -y
