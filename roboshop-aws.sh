@@ -15,8 +15,7 @@ do
         --instance-type $INSTANCES_TYPE \
         --security-group-ids $SG_ID \
         --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]'
-    $Private_IP=$(
-        aws ec2 describe-instances \
+    $Private_IP=$(aws ec2 describe-instances \
             --query "Reservations[*].Instances[*].PrivateIpAddress" \
             --output=text)
     echo $i is $Private_IP
