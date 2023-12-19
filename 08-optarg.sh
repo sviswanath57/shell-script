@@ -4,12 +4,12 @@
 
 case $1 in
   morning)
-    echo "Good Morning, $2!"
+    echo "Good Morning, $2 $3!"
     ;;
   evening)
-    echo "Good Evening, $2!"
+    echo "Good Evening, $2 $3!"
     ;;
   *)
-    echo "Hello, $2!"
+    echo "Hello, $2 $3!"
     ;;
 esac
