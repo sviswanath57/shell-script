@@ -6,18 +6,13 @@ for i in "${INSTANCES[@]}"
 do
     if [ $i == "mangodb" ] || [ $i == "mysql" ]
     then
-        aws ec2 run-instances \
-        --image-id $AMI \
-        --instance-type t3.small \
-        --security-group-ids SG_ID \
-        --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]'
+        INSTANCES-TYPE="t3.small"
     else
-        aws ec2 run-instances \
-        --image-id $AMI \
-        --instance-type t2.micro \
-        --security-group-ids SG_ID \
-        --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]'      
+        INSTANCES-TYPE="t2.micro"     
     fi
-
-
+    aws ec2 run-instances \
+        --image-id $AMI \
+        --instance-type $INSTANCES-TYPE \
+        --security-group-ids $SG_ID \
+        --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]'
 done
