@@ -1,7 +1,7 @@
 #!/bin/bash
 AMI=ami-03265a0778a880afb
 SG_ID=sg-00c14e6d6ba354df2
-INSTANCES=("mangodb" "web" "mysql")
+INSTANCES=("mangodb" "web")
 for i in "${INSTANCES[@]}"
 do
     if [ $i == "mangodb" ] || [ $i == "mysql" ]
@@ -15,4 +15,9 @@ do
         --instance-type $INSTANCES_TYPE \
         --security-group-ids $SG_ID \
         --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value='$i'}]'
+    $Private_IP=$(
+        aws ec2 describe-instances \
+            --query "Reservations[*].Instances[*].PrivateIpAddress" \
+            --output=text)
+    echo $i is $Private_IP
 done
