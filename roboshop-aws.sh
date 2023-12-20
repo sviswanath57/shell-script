@@ -1,14 +1,14 @@
 #!/bin/bash
 AMI=ami-03265a0778a880afb
 SG_ID=sg-00c14e6d6ba354df2
-INSTANCES=("mangodb" "web" "user")
+INSTANCES=("mangodb" "web" "redis" "mssql" "catalogue" "cart")
 ZONE_ID=Z0969811182YP4UP1MW89
 DOMAIN_NAME="devopslife.cloud"
 for i in "${INSTANCES[@]}"
 do
     if [ $i == "mangodb" ] || [ $i == "mysql" ]
     then
-        INSTANCES_TYPE="t3.small"
+        INSTANCES_TYPE="t2.micro"
     else
         INSTANCES_TYPE="t2.micro"     
     fi
