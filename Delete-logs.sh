@@ -16,4 +16,5 @@ LOG_FILES=$(find /home/centos/oldlogs -type f -mtime +14 -name "*.log")
 while IFS= read -r line
 do
 echo "delete log files $line"
+rm -rf $line
 done <<< $LOG_FILES
