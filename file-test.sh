@@ -1,5 +1,5 @@
 #!/bin/bash
-FOLDER="shellaa"
+FOLDER="shellaaa"
 if [ -d "$FOLDER" ];
 then
     echo "Folder is already exist $FOLDER"
