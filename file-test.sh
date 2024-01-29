@@ -16,8 +16,8 @@ G="\e[32m"
 FILE="file-testtt"
 if [ -f /devops/shell-script ];
 then
-    echo -e "$Y file exist $FILE $N"
+    echo -e "File exist $Y $FILE $N"
 else
     touch $FILE
-    echo -e "$G New file created with name $FILE $N"
+    echo -e "New file created with name $G $FILE $N"
 fi
