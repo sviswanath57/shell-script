@@ -9,7 +9,7 @@
 #     echo "New folder created $FOLDER"
 # fi
 
-FILE="file-test"
+FILE="file-test1"
 if ! [ -f /devops/shell-script ];
 then
     echo "file exist $FILE"
