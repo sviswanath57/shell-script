@@ -1,6 +1,6 @@
 #!/bin/bash
 FOLDER="shellaa"
-if [ -d "$FOLDER"];
+if [ -d "$FOLDER" ];
 then
     echo "Folder is already exist $FOLDER"
     exit 1
