@@ -1,0 +1,9 @@
+#!/bin/bash
+FOLDER="shell"
+if [ -e "$FOLDER"]
+then
+echo "Folder is already exist $FOLDER"
+else
+mkdir shell
+echo "New folder created"
+fi
