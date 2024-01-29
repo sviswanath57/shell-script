@@ -10,7 +10,7 @@
 # fi
 
 FILE="file-test"
-if $FILE -f /devops/shell-script;
+if ! [ -f /devops/shell-script ];
 then
     echo "file exist $FILE"
 else
