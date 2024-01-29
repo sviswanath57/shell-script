@@ -13,7 +13,7 @@ N="\e[0m"
 Y="\e[33m"
 G="\e[32m"
 
-FILE="file-testttnew"
+FILE="filenew-testttnew"
 if [ -f $FILE ];
 then
     echo -e "File exist $Y $FILE $N"
