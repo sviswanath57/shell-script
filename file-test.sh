@@ -1,6 +1,6 @@
 #!/bin/bash
 FOLDER="shell"
-if [ -e "$FOLDER"]
+if [ -d "$FOLDER"];
 then
 echo "Folder is already exist $FOLDER"
 else
