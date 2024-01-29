@@ -18,6 +18,7 @@ if [ -f $FILE ];
 then
     echo -e "File exist $Y $FILE $N"
 else
+    cd /devops/
     touch $FILE
     echo -e "New file created with name $G $FILE $N"
 fi
