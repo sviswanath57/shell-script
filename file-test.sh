@@ -4,6 +4,6 @@ if [ -d "$FOLDER"];
 then
 echo "Folder is already exist $FOLDER"
 else
-mkdir shell
+mkdir $FOLDER
 echo "New folder created"
 fi
