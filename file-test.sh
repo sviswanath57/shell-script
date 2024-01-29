@@ -2,8 +2,9 @@
 FOLDER="shellaa"
 if [ -d "$FOLDER"];
 then
-echo "Folder is already exist $FOLDER"
+    echo "Folder is already exist $FOLDER"
+    exit 1
 else
-mkdir $FOLDER
-echo "New folder created"
+    mkdir $FOLDER
+    echo "New folder created"
 fi
