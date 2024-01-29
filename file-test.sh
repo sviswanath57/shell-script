@@ -1,10 +1,19 @@
 #!/bin/bash
-FOLDER="shellaaanew"
-if [ -d "$FOLDER" ];
+# FOLDER="shellaaanew"
+# if [ -d "$FOLDER" ];
+# then
+#     echo "Folder is already exist $FOLDER"
+#     exit 1
+# else
+#     mkdir $FOLDER
+#     echo "New folder created $FOLDER"
+# fi
+
+FILE="file-test"
+if $FILE -f ~/devops/shell-script;
 then
-    echo "Folder is already exist $FOLDER"
-    exit 1
+    echo "file exist $FILE"
 else
-    mkdir $FOLDER
-    echo "New folder created $FOLDER"
+    touch $FILE
+    echo " New file created with name $FILE"
 fi
